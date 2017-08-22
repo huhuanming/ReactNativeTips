@@ -24,7 +24,15 @@
                                                       moduleName:@"ReactNativeTips"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
-  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+  rootView.backgroundColor = [UIColor colorWithRed:0.96 green:0.99 blue:1.00 alpha:1.00];
+  
+  [rootView setFrame:[UIScreen mainScreen].bounds];
+
+  NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"LaunchScreen" owner:self options:nil];
+  UIView *launchScreenView = nibs[0];
+  [launchScreenView setFrame:[UIScreen mainScreen].bounds];
+  [rootView setLoadingView: launchScreenView];
+
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];

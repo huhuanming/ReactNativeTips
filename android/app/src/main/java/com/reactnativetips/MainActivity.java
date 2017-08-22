@@ -1,8 +1,5 @@
 package com.reactnativetips;
 
-import com.facebook.react.ReactActivity;
-import com.facebook.react.ReactRootView;
-
 public class MainActivity extends ReactActivity {
 
     /**
